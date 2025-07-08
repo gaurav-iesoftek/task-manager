@@ -17,6 +17,9 @@ const AddTaskForm = () => {
       await createTask(formData);
       setFormData('');
       setError(null);
+      // if (onTaskAdded) {
+      //   onTaskAdded();
+      // }
     } catch (error) {
       console.error('Error adding task:', error);
       setError('Failed to add task');
@@ -27,7 +30,7 @@ const AddTaskForm = () => {
       className="flex flex-col md:flex-row gap-8 justify-between items-center  border border-neutral-200 p-4 rounded-md shadow-md bg-white w-full mx-auto"
       onSubmit={handleSubmit}
     >
-      <div className='w-full'>
+      <div className="w-full">
         <Input
           label="Title"
           type="text"

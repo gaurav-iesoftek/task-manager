@@ -67,6 +67,7 @@ const TaskList = () => {
     }
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
   };
+
   if (tasks.length === 0) {
     return (
       <div className="flex justify-center items-center bg-white min-h-80 rounded-2xl">
@@ -123,6 +124,7 @@ const TaskList = () => {
 
   return (
     <div className="flex flex-col p-4 gap-4 scroll-auto bg-white min-h-80 max-h-100 overflow-y-auto rounded-2xl">
+      
       {tasks.map((task) => (
         <div
           key={task.id}

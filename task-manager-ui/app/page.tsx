@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="container mx-auto mt-10">
       <div className="mx-4">
-        <h1 className="text-4xl font-semibold">Task Manager</h1>
+        <h1 className="text-4xl font-semibold">Add Task</h1>
         <div className="flex justify-start w-full mt-10">
           <AddTaskForm />
         </div>
