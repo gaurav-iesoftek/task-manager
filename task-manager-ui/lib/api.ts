@@ -20,7 +20,7 @@ export const updateTask = async (
   id: string,
   data: { title?: string; completed?: boolean }
 ) => {
-  const res = await fetch(`${API_URL}/task`, {
+  const res = await fetch(`${API_URL}/task/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),

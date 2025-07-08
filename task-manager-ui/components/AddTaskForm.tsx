@@ -24,20 +24,23 @@ const AddTaskForm = () => {
   };
   return (
     <form
-      className="border border-neutral-200 p-4 rounded-md shadow-md bg-white w-80 h-60 mx-auto"
+      className="flex flex-col md:flex-row gap-8 justify-between items-center  border border-neutral-200 p-4 rounded-md shadow-md bg-white w-full mx-auto"
       onSubmit={handleSubmit}
     >
-      <Input
-        label="Title"
-        type="text"
-        name="taskName"
-        value={formData}
-        onChange={(e) => setFormData(e.target.value)}
-      />
-      {error && (
-        <p className="text-red-500 mt-1 text-xs font-semibold">{error}</p>
-      )}
-      <div className="mt-4 w-full">
+      <div className='w-full'>
+        <Input
+          label="Title"
+          type="text"
+          name="taskName"
+          placeholder="Enter task title"
+          value={formData}
+          onChange={(e) => setFormData(e.target.value)}
+        />
+        {error && (
+          <p className="text-red-500 mt-1 text-xs font-semibold">{error}</p>
+        )}
+      </div>
+      <div className="mt-4 w-full flex justify-end">
         <Button type="submit">Add Task</Button>
       </div>
     </form>
